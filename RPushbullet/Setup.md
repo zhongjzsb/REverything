@@ -35,12 +35,22 @@
 ```
 * install [RPushbullet](http://dirk.eddelbuettel.com/code/rpushbullet.html) in R.
 ```
-install.package("RPushbullet")
+install.packages("RPushbullet")
 ```
 * Test the RPushbullet with
 ```
+library(RPushbullet)
 pbPost("note", "A simple title", "A message\nWith a second line")
 ```
+
+# Setup in Windows 10
+Pretty the same as setup in Mac. However, I cannot find the right home directory in Windows. It turns out that
+```
+Sys.getenv()
+Sys.getenv("HOME")
+```
+can get the right environment variables.
+put the json file under this home directory.
 
 # References
 * [Github](https://github.com/eddelbuettel/rpushbullet)
